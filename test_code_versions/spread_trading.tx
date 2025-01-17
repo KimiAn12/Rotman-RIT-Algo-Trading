@@ -1,0 +1,34 @@
+Trading Logic Description:
+
+The trading logic operates within a simulated market environment, 
+focusing on spread trading and mean reversion while managing risk through exposure controls. 
+Here’s how it works:
+
+
+--> Exposure Monitoring and Deleveraging:
+
+The system tracks both gross and net exposures.
+If exposures approach predefined limits, positions are reduced using market orders 
+to mitigate risk and free up capacity for new trades.
+
+--> Spread-Based Order Placement:
+
+For each security, bid and ask prices are adjusted based on volatility spreads, which differ by ticker.
+Order quantities are calculated to respect long and short exposure limits, ensuring compliance with risk parameters.
+
+--> Rebate-Driven Strategy:
+
+Limit Orders are prioritized for tickers with favorable rebate conditions (e.g., OWL and DUCK).
+Market Orders are used for tickers with advantageous market rebates (e.g., CROW and DOVE).
+
+--> Mean Reversion Trading:
+
+Specifically for the OWL ticker, the algorithm identifies deviations from the mean price.
+When deviations exceed a predefined threshold, the system places market orders to exploit the reversion opportunity, 
+buying on dips or selling on peaks.
+
+--> Continuous Execution:
+
+The logic operates in a loop while the market is active, ensuring dynamic adjustments to prices, positions, 
+and strategies based on real-time data.
+API request pacing is managed to respect system limits.

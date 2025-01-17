@@ -1,0 +1,15 @@
+This trading strategy uses a Simple Moving Average (SMA) crossover approach,
+combined with exposure management. 
+
+The algorithm continuously fetches relevant market data, including bid/ask spreads, price history, and current positions.
+Gross and net exposures are calculated at every iteration to ensure it adheres to predefined risk limits. 
+Trades are avoided when exposure approaches these thresholds, maintaining a conservative risk profile.
+
+The trading logic generates buy and sell signals based on the relationship between the SMA of recent prices and the current 
+bid price. A buy order is tiggered whe nthe bid price exceeds the SMA, provided no position is currently held and gross exposure
+remains within acceptable limits. 
+
+Conversely, a sell order is placed when the bid price falls below the SMA, and a current long position is held. 
+
+To ensure systematic execution and avoid overtrading, the algorithm enforces a defined interval between trades on the same ticker.
+

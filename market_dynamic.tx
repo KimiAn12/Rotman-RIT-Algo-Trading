@@ -1,0 +1,26 @@
+Market Dynamics and Fees: (Fee/Rebate Structure)
+
+--> OWL & DUCK: Favorable for passive (limit) orders due to rebates for providing liquidity
+--> CROW & DOVE: Favorable for active (market) orders due to rebates for removing liquidity
+
+OWl: (High Price, Low Volatility)
+--> Use tighter spreads when placing limit orders (0.1% - 0.2% of the price)
+   --> Avoid chasing trends. Focus on small fluctuations
+--> High inventory thresholds are acceptable given the low volatility
+
+CROW: (High Price, Medium Volatility)
+--> Incentivizes active trading via rebates for removing liquidity
+   --> Spreads around (0.2% - 0.4% of the price) 
+--> Need to be cautious of overtrading during periods of high order flow
+--> Moderate position sizing due to medium volatility
+
+DOVE: (Low Price, High Volatility)
+--> Significant price swings (Potentially rewarding)
+   --> Widen spreads for limit orders (0.5% to 1% of the price)
+--> Reduce position size to manage risk 
+   --> Volatility-adjusted positions are crucial 
+--> Monitor real time volatility and adjust threshold for stop-loss
+
+DUCK (Medium Price, Medium Volatility)
+--> Use spreads for limit orders (0.3% to 0.5% of price)
+--> Potentially adjust order size based on evolving liquidity and volatility patterns 
